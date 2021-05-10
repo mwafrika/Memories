@@ -1,0 +1,45 @@
+@media only screen and (max-width: 1440px) {
+  .paragraph1 {
+    font-size: 34px;
+  }
+  .center-form p {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .center-form form {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .center-form form {
+    width: 75%;
+    padding: 4em 4em;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .center-form form {
+    width: 75%;
+    padding: 4em 0em;
+  }
+  .center-form p {
+    padding: 1em 0em;
+  }
+  .btn-form {
+    margin-right: 150px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .center-form p {
+    font-size: 29px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .center-form p {
+    font-size: 25px;
+  }
+}

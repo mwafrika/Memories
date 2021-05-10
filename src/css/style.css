@@ -1,0 +1,70 @@
+.target .content h2,
+.content p {
+  color: black;
+}
+.service {
+  width: 350px;
+  margin: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+}
+.target button {
+  background-color: #004baf;
+  color: white;
+}
+.vision {
+  width: 100%;
+}
+.target2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.center-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.center-form form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4em 4em;
+}
+.center-form p {
+  font-size: 2em;
+
+  text-align: center;
+  align-items: center;
+  padding: 1em 2em;
+}
+@media only screen and (max-width: 375px) {
+}
+@media only screen and (max-width: 425px) {
+  .service-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .content h2 {
+    font-size: 25px;
+  }
+  .content {
+    width: 100%;
+    padding: 2em;
+  }
+  .service-block img {
+    width: 100%;
+  }
+  .banner {
+    padding: 2em;
+  }
+  .banner img {
+    width: 100%;
+  }
+}

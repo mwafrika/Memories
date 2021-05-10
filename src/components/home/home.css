@@ -1,0 +1,165 @@
+.content h2 {
+  color: white;
+  font-size: 35px;
+  margin: 1em 0em;
+}
+.first-desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 80px 80px;
+  background-color: #f4f7fd;
+}
+.first1 {
+  width: 350px;
+  margin: 20px;
+}
+.first1 h1 {
+  font-size: 25px;
+  text-align: center;
+}
+.banner img {
+  width: 50%;
+}
+.banner .content p {
+}
+.banner .content {
+  padding: 0;
+}
+.target .content {
+  width: 300px;
+  padding: 0;
+  padding: 25px;
+}
+.second-desc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.service {
+  width: 400px;
+  margin: 30px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+}
+@media only screen and (max-width: 1256px) {
+  .content h2 {
+    color: white;
+    font-size: 35px;
+    margin: 1em 0em;
+  }
+}
+/* for extremely large screen */
+@media only screen and (max-width: 2560px) {
+  .target .content {
+    width: 475px;
+    padding: 25px;
+  }
+  .blockContent1 {
+    width: 40%;
+    height: auto;
+    background-color: #004baf;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .blockContent2 {
+    width: 60%;
+    background-color: #f4f4f4;
+    height: auto;
+    padding: 4em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .content p {
+    font-size: 25px;
+    padding-bottom: 2em;
+  }
+  .blockContentLast {
+    height: 350px;
+    width: 350px;
+  }
+  header ul li a {
+    font-size: 22px;
+  }
+  .content button {
+    font-size: 16px;
+    padding: 1em;
+    border-radius: 40px;
+  }
+  .title-content {
+    font-size: 22px;
+    margin-bottom: 3em;
+  }
+  .blockContentLast {
+    height: auto;
+    width: 250px;
+  }
+  .pack-collabo {
+    font-size: 35px;
+  }
+  .space {
+    font-size: 20px;
+  }
+  .desc-last {
+    font-size: 16px;
+  }
+  .block {
+    margin: 4em;
+  }
+  .contact p {
+    font-size: 16px;
+  }
+  .btnMore {
+    width: 250px;
+    background-color: #004BAF;
+    color: WHITE;
+    border: none;
+    padding: 1em 1em;
+    font-size: 22px;
+    cursor: "pointer";
+  }
+  .blockContentLast p {
+    font-size: 16px;
+  }
+  .blockContent p {
+    font-size: 16px;
+  }
+  .blockContent {
+    width: 300px;
+    height: auto;
+  }
+  .title-raison {
+    font-size: 35px;
+  }
+  .raisons {
+    padding: 4em 4em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .first-desc {
+    padding: 20px 20px;
+  }
+  .first1 h1 {
+    font-size: 22px;
+  }
+  .s-title {
+    font-size: 22px;
+  }
+  .target {
+    flex-direction: column;
+  }
+  .target img {
+    width: 100%;
+  }
+}
+/* 1920×1080 (8.89%) 1366×768 (8.44%) 360×640 (7.28%) */
