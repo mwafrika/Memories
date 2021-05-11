@@ -1,11 +1,21 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navBar.css";
+
 const navLinks = (props) => {
+  const checkActive = (match, location) => {
+    //some additional logic to verify you are in the home URI
+    if (!location) return false;
+    const { pathname } = location;
+    console.log(pathname);
+    return pathname === "/";
+  };
   return (
     <ul>
       <li onClick={() => props.isMobile && props.closeMenu()}>
-        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/" activeClassName="active" isActive={checkActive}>
+          Accueil
+        </NavLink>
       </li>
       <li onClick={() => props.isMobile && props.closeMenu()}>
         <NavLink to="/services">Nos service</NavLink>

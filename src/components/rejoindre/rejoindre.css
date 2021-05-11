@@ -1,3 +1,13 @@
+header ul li a {
+  font-size: 18px;
+}
+.content button {
+  font-size: 15px;
+  padding: 0.5em;
+  border-radius: 30px;
+  color: #004baf;
+  font-weight: bolder;
+}
 @media only screen and (max-width: 1440px) {
   .content p {
     color: white;
@@ -10,7 +20,7 @@
   }
   .content button {
     font-size: 15px;
-    padding: 1em;
+    padding: 0.5em;
     border-radius: 30px;
   }
   header ul li a {
@@ -198,7 +208,7 @@
 
 @media only screen and (max-width: 1024px) {
   header {
-    background-color: #727272;
+    background-color: #004baf;
     display: flex;
     height: 80px;
     justify-content: space-between;
@@ -232,13 +242,11 @@
     margin: 0;
   }
   header {
-    background-color: #727272;
     display: flex;
     height: 140px;
     justify-content: center;
   }
   header {
-    background-color: #727272;
     display: flex;
     height: auto;
     top: 8%;

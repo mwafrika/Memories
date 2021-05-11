@@ -6,7 +6,7 @@ h2 {
   box-sizing: border-box;
 }
 body {
-  /* background-color: blueviolet; */
+  /* background-color: #004BAF; */
   height: auto;
   /* padding: 3em; */
 }
@@ -38,7 +38,20 @@ header img {
   width: 40%;
   padding: 2em;
 }
-
+header ul li .active {
+  background-color: #fec93b;
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px;
+  color: #004baf;
+}
+header ul li .active:hover {
+  color: white;
+  border-bottom: none;
+}
+header ul a:hover {
+  color: #fec93b;
+  border-bottom: 2px solid white;
+}
 .banner button {
   border: none;
   padding: 1em;
@@ -86,7 +99,7 @@ header ul li a {
   text-decoration: none;
   list-style: none;
   color: white;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
   margin: 20px;
   padding: 10px;
@@ -104,10 +117,7 @@ header ul li a {
   text-align: center;
   padding: 2em 2em;
 }
-header ul a:hover {
-  background-color: white;
-  color: #004baf;
-}
+
 header {
   background-color: #004baf;
   display: flex;
@@ -115,9 +125,8 @@ header {
   justify-content: space-between;
   padding-left: 2em;
   padding-right: 2em;
-  border-bottom: 2px solid powderblue;
 
-  /* background-color: blueviolet; */
+  /* background-color: #004BAF; */
 }
 .back-color {
   background-color: #f4f4f4;
@@ -238,7 +247,7 @@ footer {
 .blockContent1 {
   width: 40%;
   height: 400px;
-  background-color: blueviolet;
+  background-color: #004baf;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -255,7 +264,7 @@ footer {
   font-weight: 500;
 }
 .paragraph1 {
-  color: blueviolet;
+  color: #004baf;
   font-size: 15px;
   margin: 2em 0em;
 }
@@ -302,7 +311,7 @@ footer {
   .blockContent1 {
     width: 100%;
     height: 400px;
-    background-color: blueviolet;
+    background-color: #004baf;
   }
   .blockContent2 {
     width: 100%;
@@ -317,7 +326,7 @@ footer {
   .blockContent1 {
     width: 100%;
     height: 400px;
-    background-color: blueviolet;
+    background-color: #004baf;
   }
   .blockContent2 {
     width: 100%;
@@ -345,7 +354,7 @@ footer {
     justify-content: center;
     flex-direction: column;
 
-    background-color: blueviolet;
+    background-color: #004baf;
   }
   .banner img {
     width: 100%;
@@ -395,11 +404,7 @@ footer {
   header {
     display: flex;
     justify-content: center;
-    background-color: blueviolet;
-  }
-  header ul a:hover {
-    background-color: white;
-    color: blueviolet;
+    background-color: #004baf;
   }
 }
 
@@ -412,7 +417,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-color: #004baf;
   }
 
   .content {
@@ -437,12 +442,12 @@ footer {
     padding-left: 0;
     padding-right: 0;
     align-items: center;
-    background-color: blueviolet;
+    background-color: #004baf;
   }
   .blockContent1 {
     width: 40%;
     height: 458px;
-    background-color: blueviolet;
+    background-color: #004baf;
   }
   .blockContent2 .title {
     font-size: 26px;
@@ -499,7 +504,7 @@ footer {
   .blockContent1 {
     width: 97%;
     height: auto;
-    background-color: blueviolet;
+    background-color: #004baf;
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -527,14 +532,14 @@ footer {
     margin: 20px;
   }
   .title-raison {
-    color: blueviolet;
+    color: #004baf;
     font-size: 30px;
     margin: 1em 0em;
     text-align: center;
     font-weight: 500;
   }
   .pack-collabo {
-    color: blueviolet;
+    color: #004baf;
     font-size: 30px;
     margin: 1em 0em;
     text-align: center;
@@ -566,7 +571,6 @@ footer {
     height: 300px;
     width: 250px;
     margin: 10px;
-    background-color: GREY;
   }
   .block {
     display: flex;
@@ -608,7 +612,7 @@ footer {
   .blockContent1 {
     width: 60%;
     height: auto;
-    background-color: blueviolet;
+    background-color: #004baf;
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -634,5 +638,121 @@ footer {
   .blockContent2 .title {
     font-size: 37px;
     font-weight: 500;
+  }
+  .service-block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .content .paragraph4 {
+    color: #004baf;
+    font-size: 17px;
+    margin: 1em 0em;
+    font-size: 17px;
+  }
+  .reverse {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .content .color {
+    color: white;
+  }
+  .service-block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media only screen and (max-width: 411px) {
+  .content .paragraph4 {
+    color: #004baf;
+    font-size: 25px;
+    margin: 1em 0em;
+    font-size: 17px;
+  }
+  .content .color {
+    color: white;
+  }
+  .reverse {
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .service-block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .content .paragraph4 {
+    font-size: 17px;
+  }
+  .content .color {
+    color: white;
+  }
+  .service-block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .content .paragraph4 {
+    color: #004baf;
+    font-size: 17px;
+    margin: 1em 0em;
+    font-size: 17px;
+  }
+  .reverse {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .content .color {
+    color: white;
+  }
+  .service-block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content .paragraph4 {
+    color: #004baf;
+    font-size: 22px;
+    margin: 1em 0em;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .content .paragraph4 {
+    color: #004baf;
+    font-size: 18px;
+    margin: 1em 0em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .content .paragraph4 {
+    color: #004baf;
+    font-size: 14px;
+    margin: 1em 0em;
+  }
+  .content .paragraph1 {
+    font-size: 12px;
+    color: #004baf;
+  }
+  .content .color {
+    color: white;
+    font-size: 25px;
   }
 }

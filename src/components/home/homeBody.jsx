@@ -1,16 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../logo.svg";
-import mw from "../../images/img3.png";
+
+import pairJaune from "../../images/pair-jaune.svg";
 import computer4 from "../../images/computer4.svg";
-import computer from "../../images/computer.svg";
-import formation from "../../images/formation.svg";
+import home from "../../images/home.svg";
+import formation from "../../images/formation2.svg";
 import assistance from "../../images/assistance.svg";
 import assistance2 from "../../images/assistance2.svg";
 import vente from "../../images/vente.svg";
 import vente2 from "../../images/vente2.svg";
-import vente3 from "../../images/vente3.svg";
-import development from "../../images/development.svg";
 import development2 from "../../images/development2.svg";
 import computer2 from "../../images/computer2.svg";
 import marketing from "../../images/marketing.svg";
@@ -24,7 +22,7 @@ const homeBody = () => {
   return (
     <main>
       <div className="banner">
-        <img src={computer} alt="" />
+        <img src={home} alt="" />
         <div className="content">
           <h2>Nous concevons le futur</h2>
           <p>
@@ -32,7 +30,7 @@ const homeBody = () => {
             services de qualité que nous offrons Rejoignez-les pour en
             experimenter !!!
           </p>
-          <button>Register</button>
+          <button>CONTACTEZ-NOUS</button>
         </div>
       </div>
       <div className="first-desc">
