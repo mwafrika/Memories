@@ -1,3 +1,15 @@
+:root {
+  --blue: #004baf;
+  --white: #ffffff;
+  --jaune: #fec93b;
+  --font--big: 30px;
+  --font--mean: 20px;
+  --font--small: 15px;
+  --blueParagraph: #486e8e;
+  --font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 body,
 p,
 h2 {
@@ -8,6 +20,7 @@ h2 {
 body {
   /* background-color: #004BAF; */
   height: auto;
+
   /* padding: 3em; */
 }
 body,
@@ -119,7 +132,7 @@ header ul li a {
 }
 
 header {
-  background-color: #004baf;
+  background-color: var(--blue);
   display: flex;
   height: 80px;
   justify-content: space-between;

@@ -104,17 +104,20 @@ const homeBody = () => {
           </div>
         </a>
       </div>
-      <a href="/services/">
-        <div className="btn-service">
+
+      <div className="btn-service">
+        <a href="/services/">
           <button>Nos services</button>
-        </div>
-      </a>
+        </a>
+      </div>
 
       <div className="target">
         <img src={booster2} alt="" />
-        <div className="content">
-          <h2>Voulez-vous booster la productivité professionnelle ?</h2>
-          <p style={style.paragraph2}>
+        <div className="content change">
+          <h2 className="content-1">
+            Voulez-vous booster la productivité professionnelle ?
+          </h2>
+          <p className="content-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
             architecto molestiae recusandae non illum. Perferendis assumenda
             praesentium et iste magni? Lorem ipsum dolor sit amet consectetur
@@ -132,7 +135,7 @@ const style = {
     margin: "2em 0em",
   },
   paragraph2: {
-    color: "black",
+    // color: "black",
     fontSize: "15px",
     margin: "2em 0em",
   },
