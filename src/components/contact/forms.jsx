@@ -30,7 +30,7 @@ const Send = () => {
   };
 
   return (
-    <div className="center-form">
+    <div className="center-form" id="contact-us">
       <Form
         {...layout}
         name="nest-messages"

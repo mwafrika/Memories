@@ -1,7 +1,7 @@
 import React from "react";
-import "../../App.css";
+import "./service.css";
 import { WHITE, BLUE_VIOLET } from "../../constants/color";
-import service from "../../images/service.svg";
+import service from "../../images/service1.svg";
 import formation from "../../images/formation.svg";
 import assistance2 from "../../images/assistance2.svg";
 import vente2 from "../../images/vente2.svg";
@@ -23,7 +23,6 @@ const serviceBody = () => {
               praesentium et iste magni? Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Nulla, laborum.
             </p>
-            <button>CONTACTEZ-NOUS</button>
           </div>
           <img src={service} alt="" />
         </div>

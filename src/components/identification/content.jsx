@@ -1,10 +1,6 @@
 import React from "react";
-import mw from "../../images/img3.png";
-import logo from "../../logo.svg";
 import "../../css/style.css";
-import team from "../../images/team.svg";
-import team2 from "../../images/team2.svg";
-import historique from "../../images/historique.svg";
+import team from "../../images/team1.svg";
 import historique2 from "../../images/historique2.svg";
 import vision from "../../images/vision.svg";
 import img1 from "../../images/mwafrika.JPG";
@@ -31,7 +27,6 @@ const content = () => {
             praesentium et iste magni? Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Nulla, laborum.
           </p>
-          <button>Register</button>
         </div>
         <img src={team} alt="" />
       </div>
@@ -178,7 +173,7 @@ const content = () => {
 
 const style = {
   paragraph1: {
-    color: BLUE_VIOLET,
+    color: "#004DAF",
     fontSize: "15px",
     margin: "1em 0em",
   },
@@ -193,7 +188,7 @@ const style = {
     margin: "1em 0em",
   },
   paragraph4: {
-    color: BLUE_VIOLET,
+    color: "#004DAF",
     fontSize: "35px",
     margin: "1em 0em",
   },

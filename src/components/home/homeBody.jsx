@@ -30,7 +30,9 @@ const homeBody = () => {
             services de qualité que nous offrons Rejoignez-les pour en
             experimenter !!!
           </p>
-          <button>CONTACTEZ-NOUS</button>
+          <a href="/contact/#contact-us/">
+            <button>CONTACTEZ-NOUS</button>
+          </a>
         </div>
       </div>
       <div className="first-desc">
@@ -71,43 +73,67 @@ const homeBody = () => {
           <div className="service">
             <img src={formation} alt="" />
             <p>FORMATIONS EN INFORMATIQUE</p>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, ullam.
+            </h3>
+            <button>Voir plus</button>
           </div>
         </a>
         <a href="/services/#assistance">
           <div className="service">
             <img src={assistance2} alt="" />
             <p>ASSISTANCE & MAINTENANCE</p>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, ullam.
+            </h3>
+            <button>Voir plus</button>
           </div>
         </a>
         <a href="/services/#vente">
           <div className="service">
             <img src={vente2} alt="" />
             <p>VENTES MATERIELS INFORMATIQUES</p>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, ullam.
+            </h3>
+            <button>Voir plus</button>
           </div>
         </a>
         <a href="/services/#developement">
           <div className="service">
             <img src={development2} alt="" />
             <p>DEVELOPPEMENT DES APPLICATIONS</p>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, ullam.
+            </h3>
+            <button>Voir plus</button>
           </div>
         </a>
         <a href="/services/#marketing">
           <div className="service">
             <img src={marketing} alt="" />
             <p>MARKETING DIGITAL</p>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, ullam.
+            </h3>
+            <button>Voir plus</button>
           </div>
         </a>
         <a href="/services/#conseil">
           <div className="service">
             <img src={conseil} alt="" />
             <p>CONSEIL ET AUDIT</p>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, ullam.
+            </h3>
+            <button>Voir plus</button>
           </div>
-        </a>
-      </div>
-
-      <div className="btn-service">
-        <a href="/services/">
-          <button>Nos services</button>
         </a>
       </div>
 
@@ -124,6 +150,11 @@ const homeBody = () => {
             adipisicing elit. Nulla, laborum.
           </p>
         </div>
+      </div>
+      <div className="btn-service">
+        <a href="/services/">
+          <button>Nos services</button>
+        </a>
       </div>
     </main>
   );

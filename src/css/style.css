@@ -2,6 +2,9 @@
 .content p {
   color: black;
 } */
+:root {
+  --background--hover: #e2e3ff;
+}
 .service {
   width: 350px;
   margin: 30px;
@@ -23,6 +26,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .center-form {
   display: flex;
@@ -44,7 +48,13 @@
   align-items: center;
   padding: 1em 2em;
 }
-@media only screen and (max-width: 375px) {
+.content {
+  transition: 500ms linear;
+}
+.content:hover {
+  transform: scale(1.1);
+  background-color: var(--background--hover);
+  max-height: inherit;
 }
 @media only screen and (max-width: 425px) {
   .service-block {

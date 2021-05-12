@@ -1,6 +1,5 @@
 import React from "react";
 import { BLUE_VIOLET, GREY, WHITE } from "../../constants/color";
-import "../../App.css";
 import "./rejoindre.css";
 import welcome from "../../images/welcome.svg";
 import welcome2 from "../../images/welcome2.svg";
@@ -27,7 +26,6 @@ const rejoindreBody = () => {
             praesentium et iste magni? Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Nulla, laborum.
           </p>
-          <button>Register</button>
         </div>
       </div>
       <p className="title-raison">3 bonnes raisons de nous rejoindre</p>

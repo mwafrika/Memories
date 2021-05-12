@@ -7,6 +7,8 @@
   --font--small: 15px;
   --font--small-btn: 11px;
   --blueParagraph: #486e8e;
+  --background--hover: #e2e3ff;
+  --padding--button: 5px 30px 5px 30px;
   --font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -35,6 +37,25 @@
   color: var(--blueParagraph);
   font-weight: bolder;
 }
+.service h3 {
+  font-size: var(--font--small);
+  color: var(--blueParagraph);
+}
+.service button {
+  padding: var(--padding--button);
+  font-size: var(--font--mean);
+  border: none;
+  border-radius: var(--font--mean);
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  margin-top: var(--font--small);
+  align-items: center;
+  display: flex;
+}
+.service button:hover {
+  background-color: var(--jaune);
+}
 .service-title .s-title {
   font-size: var(--font--big);
   color: var(--blue);
@@ -54,14 +75,26 @@
 .first1 {
   width: 350px;
   margin: 30px;
+  transition: 500ms linear;
+  padding-left: var(--font--small);
+  padding-right: var(--font--small);
 }
+.first1:hover {
+  transform: scale(1.1);
+  background-color: var(--background--hover);
+  color: var(--jaune);
+}
+
 .first1 h1 {
   font-size: var(--font--mean);
 }
 .banner img {
   width: 50%;
+  transition: 500ms linear;
 }
-
+.banner img:hover {
+  transform: scale(1.1);
+}
 .banner .content {
   padding: 0;
 }
@@ -86,6 +119,13 @@
   align-items: center;
   text-align: center;
   padding: 1em;
+  transition: 500ms linear;
+}
+
+.service:hover {
+  transform: scale(1.1);
+  background-color: #e2e3ff;
+  opacity: 1;
 }
 @media only screen and (max-width: 1256px) {
   .content h2 {
@@ -128,7 +168,7 @@
 }
 @media only screen and (max-width: 2560px) {
   .target .content {
-    width: 100%;
+    width: 350px;
     padding: 25px;
   }
   .blockContent1 {

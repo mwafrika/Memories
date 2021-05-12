@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../logo.svg";
 import Form from "./forms";
 import { BLUE_VIOLET, WHITE } from "../../constants/color";
-import contact from "../../images/contact.svg";
+import contact from "../../images/contact2.svg";
 const contactBody = () => {
   return (
     <main>

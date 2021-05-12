@@ -4,12 +4,34 @@
   --jaune: #fec93b;
   --font--big: 30px;
   --font--mean: 20px;
+  --background--hover: #e2e3ff;
   --font--small: 15px;
   --blueParagraph: #486e8e;
   --font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
+.blockContent {
+  transition: 500ms linear;
+}
+.blockContent2 button {
+  transition: 500ms linear;
+  cursor: pointer;
+}
+.blockContent2 button:hover {
+  background-color: var(--jaune);
+  transform: scale(1.1);
+}
+.blockContent:hover {
+  background-color: var(--background--hover);
+  transform: scale(1.1);
+}
+.blockContentLast {
+  transition: 500ms linear;
+}
+.blockContentLast:hover {
+  background-color: var(--background--hover);
+  transform: scale(1.1);
+}
 header ul li a {
   font-size: var(--font--mean);
   font-family: var(--font-family);
@@ -34,9 +56,10 @@ header ul li a {
   font-weight: bolder;
   background-color: var(--white);
 }
+
 @media only screen and (max-width: 1440px) {
   .content p {
-    color: var(--white1);
+    color: var(--white);
     font-size: 20px;
     margin: 1em 0em;
   }
