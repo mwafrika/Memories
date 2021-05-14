@@ -48,6 +48,9 @@ header ul li a {
   color: var(--blueParagraph);
   font-size: var(--font--mean);
 }
+.first1 P:hover {
+  color: var(--jaune);
+}
 .content button {
   font-size: var(--font--small);
   padding: 0.5em;

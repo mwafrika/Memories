@@ -1,20 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import pairJaune from "../../images/pair-jaune.svg";
-import computer4 from "../../images/computer4.svg";
+import { Carousel, Card } from "antd";
 import home from "../../images/home.svg";
-import formation from "../../images/formation2.svg";
-import assistance from "../../images/assistance.svg";
-import assistance2 from "../../images/assistance2.svg";
-import vente from "../../images/vente.svg";
-import vente2 from "../../images/vente2.svg";
-import development2 from "../../images/development2.svg";
-import computer2 from "../../images/computer2.svg";
-import marketing from "../../images/marketing.svg";
-import conseil from "../../images/conseil.svg";
-import booster from "../../images/booster.svg";
-import booster2 from "../../images/booster2.svg";
+import img1 from "../../images/mwafrika1.jpg";
+import img4 from "../../images/img4.jpg";
+import img6 from "../../images/image6.JPG";
 import "./home.css";
 
 import { WHITE, BLUE_VIOLET } from "../../constants/color";
@@ -71,74 +60,134 @@ const homeBody = () => {
       <div className="second-desc">
         <a href="/services/#formation">
           <div className="service">
-            <img src={formation} alt="" />
-            <p>FORMATIONS EN INFORMATIQUE</p>
-            <h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, ullam.
-            </h3>
-            <button>Voir plus</button>
+            <img src={img1} alt="" />
+            <div
+              style={{
+                padding: "10px 25px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <p>FORMATION EN INFORMATIQUES</p>
+              <h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti, ullam.Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Voluptate, eos.
+              </h3>
+              <button>Voir plus</button>
+            </div>
           </div>
         </a>
         <a href="/services/#assistance">
           <div className="service">
-            <img src={assistance2} alt="" />
-            <p>ASSISTANCE & MAINTENANCE</p>
-            <h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, ullam.
-            </h3>
-            <button>Voir plus</button>
+            <img src={img1} alt="" />
+            <div
+              style={{
+                padding: "10px 25px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <p>ASSISTANCE ET MAINTENANCE</p>
+              <h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti, ullam.Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Voluptate, eos.
+              </h3>
+              <button>Voir plus</button>
+            </div>
           </div>
         </a>
         <a href="/services/#vente">
           <div className="service">
-            <img src={vente2} alt="" />
-            <p>VENTES MATERIELS INFORMATIQUES</p>
-            <h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, ullam.
-            </h3>
-            <button>Voir plus</button>
+            <img src={img1} alt="" />
+            <div
+              style={{
+                padding: "10px 25px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <p>VENTES MATERIELS INFORMATIQUES</p>
+              <h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti, ullam.Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Voluptate, eos.
+              </h3>
+              <button>Voir plus</button>
+            </div>
           </div>
         </a>
         <a href="/services/#developement">
           <div className="service">
-            <img src={development2} alt="" />
-            <p>DEVELOPPEMENT DES APPLICATIONS</p>
-            <h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, ullam.
-            </h3>
-            <button>Voir plus</button>
+            <img src={img1} alt="" />
+            <div
+              style={{
+                padding: "10px 25px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <p>VENTES MATERIELS INFORMATIQUES</p>
+              <h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti, ullam.Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Voluptate, eos.
+              </h3>
+              <button>Voir plus</button>
+            </div>
           </div>
         </a>
         <a href="/services/#marketing">
           <div className="service">
-            <img src={marketing} alt="" />
-            <p>MARKETING DIGITAL</p>
-            <h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, ullam.
-            </h3>
-            <button>Voir plus</button>
+            <img src={img1} alt="" />
+            <div
+              style={{
+                padding: "10px 25px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <p>MARKETING DIGITAL</p>
+              <h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti, ullam.Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Voluptate, eos.
+              </h3>
+              <button>Voir plus</button>
+            </div>
           </div>
         </a>
         <a href="/services/#conseil">
           <div className="service">
-            <img src={conseil} alt="" />
-            <p>CONSEIL ET AUDIT</p>
-            <h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, ullam.
-            </h3>
-            <button>Voir plus</button>
+            <img src={img1} alt="" />
+            <div
+              style={{
+                padding: "10px 25px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <p>CONSEIL ET AUDIT</p>
+              <h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti, ullam.Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Voluptate, eos.
+              </h3>
+              <button>Voir plus</button>
+            </div>
           </div>
         </a>
       </div>
 
       <div className="target">
-        <img src={booster2} alt="" />
+        <img src={img1} alt="" />
         <div className="content change">
           <h2 className="content-1">
             Voulez-vous booster la productivité professionnelle ?
@@ -151,7 +200,60 @@ const homeBody = () => {
           </p>
         </div>
       </div>
-      <div className="btn-service">
+
+      <div className="carousel-container">
+        <div className="carousel-item">
+          <h1
+            style={{
+              textAlign: "center",
+              color: "#004baf",
+              fontWeight: "bolder",
+              padding: "30px",
+            }}
+          >
+            TEMOIGNAGE
+          </h1>
+          <Carousel
+            autoplay
+            interval={1000}
+            className="carousel"
+            showDots={false}
+            arrows
+          >
+            <div>
+              <img src={img1} alt="" />
+              <h2>John Pombe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                cupiditate aperiam, distinctio esse commodi nostrum laboriosam
+                magnam quasi. Sunt, quae. Lorem ipsum dolor, sit amet
+                consectetur
+              </p>
+            </div>
+            <div>
+              <img src={img4} alt="" />
+              <h2>Patrick Olombe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                cupiditate aperiam, distinctio esse commodi nostrum laboriosam
+                magnam quasi. Sunt, quae. Lorem ipsum dolor, sit amet
+                consectetur
+              </p>
+            </div>
+            <div>
+              <img src={img6} alt="" />
+              <h2>Master B Shako</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                cupiditate aperiam, distinctio esse commodi nostrum laboriosam
+                magnam quasi. Sunt, quae. Lorem ipsum dolor, sit amet
+                consectetur
+              </p>
+            </div>
+          </Carousel>
+        </div>
+      </div>
+      <div className="btn-service" style={{ backgroundColor: "#e2e3ff" }}>
         <a href="/services/">
           <button>Nos services</button>
         </a>

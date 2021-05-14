@@ -36,7 +36,8 @@ html {
   width: 100%;
 }
 header img {
-  width: 10%;
+  width: 15%;
+  padding: 10px;
 }
 .banner {
   display: flex;
@@ -188,16 +189,14 @@ button:focus {
 }
 .target {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0em;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #f4f7fd;
 }
-.target img {
-  width: 40%;
-}
+
 .target .vision img {
   width: 100%;
 }

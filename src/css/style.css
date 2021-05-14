@@ -6,14 +6,14 @@
   --background--hover: #e2e3ff;
 }
 .service {
-  width: 350px;
-  margin: 30px;
+  /* width: 300px; */
+  /* margin: 20px; */
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1em;
+  /* padding: 1em; */
 }
 .target button {
   background-color: #004baf;
