@@ -4,6 +4,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { compose, createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import reducers from "./reducers/index";
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
