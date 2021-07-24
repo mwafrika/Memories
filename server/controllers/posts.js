@@ -13,6 +13,7 @@ const Posts = {
     try {
       const postData = req.body;
       const post = new Post(postData);
+      console.log(post, "check");
       post.save();
       res.status(201).json(post);
     } catch (error) {
