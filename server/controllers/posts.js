@@ -1,25 +1,38 @@
-import Post from "../models/Post";
-const Posts = {
-  getPost: async (req, res) => {
-    try {
-      const postData = await Post.find();
-      console.log(postData);
-      res.status(200).json(postData);
-    } catch (error) {
-      res.status(404).json({ message: error.message });
-    }
-  },
-  createPost: (req, res) => {
-    try {
-      const postData = req.body;
-      const post = new Post(postData);
-      console.log(post, "check");
-      post.save();
-      res.status(201).json(post);
-    } catch (error) {
-      res.status(409).json({ message: error.message });
-    }
-  },
+import Post from "../database/models/index";
+
+import express from "express";
+import mongoose from "mongoose";
+import PostMessage from "../models/Post";
+
+const router = express.Router();
+
+export const getPosts = async (req, res) => {
+  try {
+    const postMessages = await PostMessage.find().exec();
+
+    res.status(200).json(postMessages);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const createPost = async (req, res) => {
+  const { title, message, selectedFile, creator, tags } = req.body;
+
+  const newPostMessage = new PostMessage({
+    title,
+    message,
+    selectedFile,
+    creator,
+    tags,
+  });
+
+  try {
+    await newPostMessage.save();
+
+    res.status(201).json(newPostMessage);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
 };
 
-export default Posts;
+export default router;
