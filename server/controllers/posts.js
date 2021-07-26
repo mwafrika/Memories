@@ -1,5 +1,3 @@
-import Post from "../database/models/index";
-
 import express from "express";
 import mongoose from "mongoose";
 import PostMessage from "../models/Post";
