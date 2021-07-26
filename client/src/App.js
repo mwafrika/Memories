@@ -12,7 +12,7 @@ import { getPosts } from "./actions/posts";
 const App = () => {
   const classes = useStyle();
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);

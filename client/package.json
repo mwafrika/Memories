@@ -2,10 +2,11 @@
   "name": "react-redux-hooks-jwt-auth",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:3000",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
