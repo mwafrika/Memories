@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node --experimental-modules index.js",
     "dev-start": "nodemon -r esm index.js"
   },
   "keywords": [],
