@@ -35,6 +35,7 @@ const App = () => {
             spacing="3"
             justifyContent="space-between"
             alignItems="stretch"
+            className={classes.mainContainer}
           >
             <Grid item xs="12" sm="7">
               <Posts setCurrentId={setCurrentId} />
