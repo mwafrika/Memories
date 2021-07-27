@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "babel-node --experimental-modules --es-module-specifier-resolution=node index.js",
     "dev-start": "nodemon -r esm index.js"
   },
   "keywords": [],

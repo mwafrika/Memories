@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import routes from "../routes/posts.js";
+import routes from "react-redux-project/server/routes";
 
 dotenv.config();
 const app = express();
