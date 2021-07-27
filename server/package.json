@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node -r esm index.js",
+    "start": "node index.js",
     "dev-start": "nodemon -r esm index.js"
   },
   "keywords": [],
