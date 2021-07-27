@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import router from "./routes/posts.js";
+import router from "../server/routes/posts";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
