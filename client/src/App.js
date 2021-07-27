@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container, Typography, AppBar, Grow, Grid } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
 import souvenir from "./images/suse.png";
 import Form from "./components/form/Form";
 import Posts from "./components/Posts/Post";
 import useStyle from "./styles";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { getPosts } from "./actions/posts";
 
 const App = () => {
