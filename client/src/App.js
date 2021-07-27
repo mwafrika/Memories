@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Typography, AppBar, Grow, Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import souvenir from "./images/suse.png";
@@ -12,7 +12,7 @@ import { getPosts } from "./actions/posts";
 const App = () => {
   const classes = useStyle();
   const dispatch = useDispatch();
-
+  const [currentId, setCurrentId] = useState(null);
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
@@ -39,10 +39,10 @@ const App = () => {
             alignItems="stretch"
           >
             <Grid item xs="12" sm="7">
-              <Posts />
+              <Posts setCurrentId={setCurrentId} />
             </Grid>
             <Grid item xs="12" sm="4">
-              <Form />
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
             </Grid>
           </Grid>
         </Container>

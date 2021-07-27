@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useStyle from "./style";
 import { Typography, Paper, Button, TextField } from "@material-ui/core";
 import FileBase from "react-file-base64";
-import { useDispatch } from "react-redux";
-import { createPost } from "../../actions/posts";
+import { useDispatch, useSelector } from "react-redux";
+import { createPost, updatePost } from "../../actions/posts";
 
-const Form = () => {
+const Form = ({ currentId, setCurrentId }) => {
   const classes = useStyle();
   const dispatch = useDispatch();
+  const posts = useSelector((state) =>
+    currentId ? state.posts.find((p) => p._id === currentId) : null
+  );
+
+  useEffect(() => {
+    if (posts) setPostData(posts);
+  }, [posts]);
 
   const [postData, setPostData] = useState({
     title: "",
@@ -19,10 +26,16 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(createPost(postData));
+    if (currentId) {
+      dispatch(updatePost(currentId, postData));
+    } else {
+      dispatch(createPost(postData));
+    }
+    clear();
   };
 
   const clear = () => {
+    setCurrentId(null);
     setPostData({
       title: "",
       message: "",
@@ -40,7 +53,7 @@ const Form = () => {
         onSubmit={handleSubmit}
       >
         <Typography variant="h6" component="h6">
-          Creating a memory
+          {currentId ? "Updating a memory" : "Creating a memory"}
         </Typography>
         <TextField
           name="creator"
