@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import router from "../server/routes/posts";
+import routes from "./routes/posts.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
@@ -11,12 +11,12 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send({
-    message: "Welcome to memory app",
-  });
-});
-app.use("/posts", router);
+// app.get("/", (req, res) => {
+//   res.send({
+//     message: "Welcome to memory app",
+//   });
+// });
+app.use("/posts", routes);
 
 const PORT = process.env.PORT || 5000;
 mongoose
