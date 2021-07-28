@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
-  publish="Souvenirs/client/build"
-  base = "Souvenirs/client"
+  publish="build"
+  base = "build"
 
 [[redirects]]
   from = "/*"
