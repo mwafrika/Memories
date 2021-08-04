@@ -15,7 +15,7 @@ import Input from "./Input";
 import { GoogleLogin } from "react-google-login";
 import { AUTH } from "../../constants/actionTypes";
 import { useHistory } from "react-router-dom";
-import { signup, login } from "../../actions/auth";
+import { signup, signIn } from "../../actions/auth";
 
 const initialValues = {
   email: "",
@@ -37,7 +37,7 @@ const Auth = () => {
     if (isSignup) {
       dispatch(signup, formData);
     } else {
-      dispatch(login, formData);
+      dispatch(signIn, formData);
     }
     console.log(formData);
   };
@@ -48,7 +48,7 @@ const Auth = () => {
   const handleShowPassword = () => setShowPassword((prevState) => !prevState);
   const switchMode = () => {
     setIsSignup((prevState) => !prevState);
-    handleShowPassword(false);
+    setShowPassword(false);
   };
   const googleSuccess = async (res) => {
     const result = res?.profileObj;

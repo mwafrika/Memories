@@ -1,19 +1,27 @@
-// import * as Api from "../Api";
+import * as Api from "../Api";
 import { AUTH } from "../constants/actionTypes";
 
 export const signup = (formData, history) => async (dispatch) => {
   try {
-    // const response = await Api.signup(formData);
-    // dispatch({
-    //   type: AUTH,
-    //   payload: response,
-    // });
-    history.push("/");
-  } catch (error) {
+    const { data } = await Api.signUp(formData);
     dispatch({
       type: AUTH,
-      payload: error,
+      data,
     });
+    history.push("/");
+  } catch (error) {
+    console.log(error);
   }
 };
-export const login = (formData, history) => async (dispatch) => {};
+export const signIn = (formData, history) => async (dispatch) => {
+  try {
+    const { data } = await Api.signIn(formData);
+    dispatch({
+      type: AUTH,
+      data,
+    });
+    history.push("/");
+  } catch (error) {
+    console.log(error);
+  }
+};
