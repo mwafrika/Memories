@@ -35,9 +35,9 @@ const Auth = () => {
   const handleSumbit = (e) => {
     e.preventDefault();
     if (isSignup) {
-      dispatch(signup, formData);
+      dispatch(signup(formData, history));
     } else {
-      dispatch(signIn, formData);
+      dispatch(signIn(formData, history));
     }
     console.log(formData);
   };
