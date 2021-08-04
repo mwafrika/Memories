@@ -8,6 +8,7 @@ const { SECRET_KEY } = process.env;
 const auth = (req, res, next) => {
   try {
     const { authorization } = req.headers;
+
     if (!authorization) {
       return res.status(401).send({ message: "Token is required" });
     }
@@ -19,6 +20,7 @@ const auth = (req, res, next) => {
     if (token && isCutomAuth) {
       decodedData = jwt.verify(token, SECRET_KEY);
       req.userId = decodedData.id;
+      console.log(req.userId, "mwaffffrika");
     } else {
       decodedData = jwt.decode(token);
       req.userId = decodedData.sub;
