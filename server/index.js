@@ -3,6 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import routes from "./routes/posts";
+import UserRoutes from "./routes/auth";
 
 dotenv.config();
 const app = express();
@@ -17,7 +18,7 @@ app.get("/", (req, res) => {
   });
 });
 app.use("/posts", routes);
-
+app.use("/user", UserRoutes);
 const PORT = process.env.PORT || 5000;
 mongoose
   .connect(process.env.CONNECTION_URL, {
