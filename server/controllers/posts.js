@@ -5,10 +5,34 @@ import PostMessage from "../models/Post";
 const router = express.Router();
 
 export const getPosts = async (req, res) => {
+  const { page } = req.query;
   try {
-    const postMessages = await PostMessage.find().exec();
+    const LIMIT = 8;
+    const startIndex = (Number(page) - 1) * LIMIT;
+    const total = await PostMessage.countDocuments({}).exec();
+    const posts = await PostMessage.find()
+      .sort({ _id: -1 })
+      .limit(LIMIT)
+      .skip(startIndex)
+      .exec();
 
-    res.status(200).json(postMessages);
+    res.status(200).json({
+      data: posts,
+      currentPage: Number(page),
+      numberOfPages: Math.ceil(total / LIMIT),
+    });
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getPostBySearch = async (req, res) => {
+  try {
+    const { searchQuery, tags } = req.query;
+    const title = new RegExp(searchQuery, "i");
+    const posts = await PostMessage.find({
+      $or: [{ title }, { tags: { $in: tags.split(",") } }],
+    }).exec();
+    res.json({ data: posts });
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
