@@ -12,11 +12,12 @@ import {
 
 export const getPosts = (page) => async (dispatch) => {
   try {
-    const { data } = await Api.fetchPosts(page);
-
     dispatch({
       type: START_LOADING,
     });
+    const { data } = await Api.fetchPosts(page);
+
+    console.log(data, "josueAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
     dispatch({
       type: FETCH_ALL,
@@ -32,12 +33,13 @@ export const getPosts = (page) => async (dispatch) => {
 };
 export const getPostBySearch = (searchQuery) => async (dispatch) => {
   try {
-    const {
-      data: { data },
-    } = await Api.fetchPostsBySearch(searchQuery);
     dispatch({
       type: START_LOADING,
     });
+    const {
+      data: { data },
+    } = await Api.fetchPostsBySearch(searchQuery);
+
     dispatch({
       type: FETCH_BY_SEARCH,
       payload: data,
@@ -51,10 +53,11 @@ export const getPostBySearch = (searchQuery) => async (dispatch) => {
 };
 export const createPost = (post) => async (dispatch) => {
   try {
-    const { data } = await Api.createPost(post);
     dispatch({
       type: START_LOADING,
     });
+    const { data } = await Api.createPost(post);
+
     dispatch({
       type: CREATE,
       payload: data,
