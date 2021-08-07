@@ -9,10 +9,9 @@ const Posts = ({ setCurrentId }) => {
   console.log(posts, "mwwafrika");
   if (!posts.length && !isLoading) return "No posts";
 
-  // return isLoading ? (
-  //   <CircularProgress />
-  // ) : (
-  return (
+  return isLoading ? (
+    <CircularProgress />
+  ) : (
     <Grid
       className={classes.container}
       container
@@ -26,7 +25,6 @@ const Posts = ({ setCurrentId }) => {
       ))}
     </Grid>
   );
-  // );
 };
 
 export default Posts;

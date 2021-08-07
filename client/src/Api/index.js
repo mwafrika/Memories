@@ -1,6 +1,7 @@
 import axios from "axios";
+// https://souvenir-01.herokuapp.com/ http://localhost:5000
 
-const API = axios.create({ baseURL: "http://localhost:5000" });
+const API = axios.create({ baseURL: "https://souvenir-01.herokuapp.com/" });
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
     req.headers.Authorization = `Bearer ${
@@ -11,6 +12,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 export const fetchPosts = (page) => API.get(`/posts?page=${page}`);
+export const fetchPost = (id) => API.get(`/posts/${id}`);
 export const fetchPostsBySearch = (searchQuery) =>
   API.get(
     `/posts/search?searchQuery=${searchQuery.search || "none"}&tags=${

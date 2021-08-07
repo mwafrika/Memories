@@ -8,8 +8,30 @@ import {
   FETCH_BY_SEARCH,
   START_LOADING,
   END_LOADING,
+  FETCH_POST,
 } from "../constants/actionTypes";
 
+export const getPost = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: START_LOADING,
+    });
+    const { data } = await Api.fetchPosts(id);
+
+    console.log(data);
+
+    dispatch({
+      type: FETCH_POST,
+      payload: data,
+    });
+
+    dispatch({
+      type: END_LOADING,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 export const getPosts = (page) => async (dispatch) => {
   try {
     dispatch({
@@ -17,7 +39,7 @@ export const getPosts = (page) => async (dispatch) => {
     });
     const { data } = await Api.fetchPosts(page);
 
-    console.log(data, "josueAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.log(data);
 
     dispatch({
       type: FETCH_ALL,
@@ -51,13 +73,14 @@ export const getPostBySearch = (searchQuery) => async (dispatch) => {
     console.log(error);
   }
 };
-export const createPost = (post) => async (dispatch) => {
+export const createPost = (post, history) => async (dispatch) => {
   try {
     dispatch({
       type: START_LOADING,
     });
-    const { data } = await Api.createPost(post);
 
+    const { data } = await Api.createPost(post);
+    history.push(`/posts/${data._id}`);
     dispatch({
       type: CREATE,
       payload: data,

@@ -6,23 +6,35 @@ const router = express.Router();
 
 export const getPosts = async (req, res) => {
   const { page } = req.query;
+
   try {
     const LIMIT = 8;
-    const startIndex = (Number(page) - 1) * LIMIT;
-    const total = await PostMessage.countDocuments({}).exec();
+    const startIndex = (Number(page) - 1) * LIMIT; // get the starting index of every page
+
+    const total = await PostMessage.countDocuments({});
     const posts = await PostMessage.find()
       .sort({ _id: -1 })
       .limit(LIMIT)
-      .skip(startIndex)
-      .exec();
+      .skip(startIndex);
 
-    res.status(200).json({
+    console.log(Number(page), posts, Math.ceil(total / LIMIT));
+
+    res.json({
       data: posts,
       currentPage: Number(page),
       numberOfPages: Math.ceil(total / LIMIT),
     });
-    let v = Number(page);
-    console.log(v, Math.ceil(total / LIMIT), "Mwafrika");
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getPost = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const post = await PostMessage.findById(id);
+
+    res.status(200).json(post);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
