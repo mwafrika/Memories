@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "@material-ui/core";
-import useStyle from "./styles";
 import AppBar from "./components/NavBar/Navbar";
 import Home from "./components/Home/Home";
 import Auth from "./components/Auth/Auth";
@@ -10,7 +9,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Redirect,
-  Link,
 } from "react-router-dom";
 const App = () => {
   const user = JSON.parse(localStorage.getItem("profile"));

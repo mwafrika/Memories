@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Container,
   Grow,
@@ -12,7 +12,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import ChipInput from "material-ui-chip-input";
 import Posts from "../Posts/Post";
 import Form from "../form/Form";
-import { getPostBySearch, getPosts } from "../../actions/posts";
+import { getPostBySearch } from "../../actions/posts";
 import { useDispatch } from "react-redux";
 import Pagination from "../Pagination";
 import useStyles from "./styles";
@@ -98,9 +98,11 @@ const Home = () => {
               </Button>
             </AppBar>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            <Paper elevation={6}>
-              <Pagination page={page} />
-            </Paper>
+            {searchQuery && tags.lenth && (
+              <Paper elevation={6}>
+                <Pagination page={page} className={classes.pagination} />
+              </Paper>
+            )}
           </Grid>
         </Grid>
       </Container>

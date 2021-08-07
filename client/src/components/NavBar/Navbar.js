@@ -3,7 +3,7 @@ import { AppBar, Avatar, Button, Toolbar, Typography } from "@material-ui/core";
 import memoryLogo from "../../images/memories-Logo.png";
 import memoryText from "../../images/memories-Text.png";
 import useStyles from "./style";
-import { Link, Route, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import { LOGOUT } from "../../constants/actionTypes";
@@ -30,7 +30,6 @@ const Navbar = () => {
     }
     setUser(JSON.parse(localStorage.getItem("profile")));
   }, [location]);
-  console.log(user);
 
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">

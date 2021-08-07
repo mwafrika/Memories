@@ -21,6 +21,7 @@ export const getPosts = async (req, res) => {
       currentPage: Number(page),
       numberOfPages: Math.ceil(total / LIMIT),
     });
+    console.log(Number(page), Math.ceil(total / LIMIT), "Mwafrika");
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
