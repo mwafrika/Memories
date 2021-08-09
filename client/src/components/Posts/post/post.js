@@ -53,9 +53,15 @@ const Post = ({ post, setCurrentId }) => {
       </>
     );
   };
+  console.log(post.selectedFile, "TRY CSS");
   return (
     <Card className={classes.card} raised elevation={6}>
-      <ButtonBase className={classes.cardActions} onClick={openPost}>
+      <ButtonBase
+        component="span"
+        name="test"
+        className={classes.cardAction}
+        onClick={openPost}
+      >
         <CardMedia
           className={classes.media}
           image={
@@ -72,11 +78,12 @@ const Post = ({ post, setCurrentId }) => {
         </div>
         {(user?.result?.googleId === post?.creator ||
           user?.result?._id === post?.creator) && (
-          <div className={classes.overlay2}>
+          <div className={classes.overlay2} name="edit">
             <Button
               style={{ color: "white" }}
               size="small"
-              onClick={() => {
+              onClick={(e) => {
+                e.stopPropagation();
                 setCurrentId(post._id);
               }}
             >
@@ -89,12 +96,17 @@ const Post = ({ post, setCurrentId }) => {
             {post.tags.map((tag) => `#${tag} `)}
           </Typography>
         </div>
-        <Typography className={classes.title} variant="h5" gutterBottom>
+        <Typography
+          className={classes.title}
+          variant="h5"
+          gutterBottom
+          component="h2"
+        >
           {post.title}
         </Typography>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            {post.message}
+            {post.message.split(" ").splice(0, 20).join(" ")} ...
           </Typography>
         </CardContent>
       </ButtonBase>

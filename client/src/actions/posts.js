@@ -1,4 +1,4 @@
-import * as Api from "../Api";
+import * as Api from "../Api/index";
 import {
   CREATE,
   UPDATE,
@@ -16,14 +16,11 @@ export const getPost = (id) => async (dispatch) => {
     dispatch({
       type: START_LOADING,
     });
-    const { data } = await Api.fetchPosts(id);
+    const { data } = await Api.fetchPost(id);
 
-    console.log(data);
-
-    dispatch({
-      type: FETCH_POST,
-      payload: data,
-    });
+    console.log(data, "SINGLE POST");
+    // dispatch({ type: FETCH_POST, payload: { post: data } });
+    dispatch({ type: FETCH_POST, payload: { post: data } });
 
     dispatch({
       type: END_LOADING,
@@ -37,13 +34,15 @@ export const getPosts = (page) => async (dispatch) => {
     dispatch({
       type: START_LOADING,
     });
-    const { data } = await Api.fetchPosts(page);
+    const {
+      data: { data, currentPage, numberOfPages },
+    } = await Api.fetchPosts(page);
 
-    console.log(data);
+    console.log(data, currentPage, numberOfPages, "Mwafrika Actions");
 
     dispatch({
       type: FETCH_ALL,
-      payload: data,
+      payload: { data, currentPage, numberOfPages },
     });
 
     dispatch({

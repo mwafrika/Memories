@@ -25,6 +25,7 @@ const reducer = (state = { isLoading: true, posts: [] }, action) => {
       };
 
     case FETCH_ALL:
+      console.log("FETCH_ALL");
       return {
         ...state,
         posts: action.payload.data,
@@ -51,7 +52,7 @@ const reducer = (state = { isLoading: true, posts: [] }, action) => {
       return { ...state, posts: action.payload };
 
     case FETCH_POST:
-      return { ...state, post: action.payload };
+      return { ...state, post: action.payload.post };
 
     case CREATE:
       return { ...state, posts: [...state.posts, action.payload] };

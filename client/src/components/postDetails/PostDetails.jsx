@@ -12,6 +12,7 @@ import useStyles from "./styles";
 import { getPost, getPostBySearch } from "../../actions/posts";
 const PostDetails = () => {
   const { post, posts, isLoading } = useSelector((state) => state.posts);
+
   const dispatch = useDispatch();
   const history = useHistory();
   const classes = useStyles();
@@ -21,8 +22,11 @@ const PostDetails = () => {
     dispatch(getPost(id));
   }, [id]);
   useEffect(() => {
+    console.log(post, "POST DETAILS");
     if (post) {
-      dispatch(getPostBySearch({ search: "none", tags: post?.tags.join(",") }));
+      dispatch(
+        getPostBySearch({ search: "none", tags: post?.post?.tags.join(",") })
+      );
     }
   }, [post]);
 
@@ -80,7 +84,7 @@ const PostDetails = () => {
           />
         </div>
       </div>
-      {recommendedPosts.length && (
+      {!!recommendedPosts.length && (
         <div className={classes.section}>
           <Typography gutterBottom variant="h5">
             You must also like this

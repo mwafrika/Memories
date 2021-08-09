@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Grow,
@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import { useHistory, useLocation } from "react-router-dom";
 import ChipInput from "material-ui-chip-input";
+import { getPosts } from "../../actions/posts";
 import Posts from "../Posts/Post";
 import Form from "../form/Form";
 import { getPostBySearch } from "../../actions/posts";
@@ -31,6 +32,10 @@ const Home = () => {
   const classes = useStyles();
   const [search, setSearch] = useState("");
   const [tags, setTags] = useState([]);
+
+  useEffect(() => {
+    console.log("Mwafrika Home");
+  }, [dispatch, page]);
 
   const searchPost = () => {
     if (search.trim() || tags) {
@@ -98,7 +103,7 @@ const Home = () => {
               </Button>
             </AppBar>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            {searchQuery && tags.lenth && (
+            {!searchQuery && !tags.lenth && (
               <Paper elevation={6}>
                 <Pagination page={page} className={classes.pagination} />
               </Paper>

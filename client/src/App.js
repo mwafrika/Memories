@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@material-ui/core";
-import AppBar from "./components/NavBar/Navbar";
+import NavBar from "./components/NavBar/Navbar";
 import Home from "./components/Home/Home";
 import Auth from "./components/Auth/Auth";
 import PostDetails from "./components/postDetails/PostDetails";
@@ -15,14 +15,14 @@ const App = () => {
   return (
     <Router>
       <Container maxWidth="lg">
-        <AppBar />
+        <NavBar />
         <Switch>
           <Route path="/" exact component={() => <Redirect to="/posts" />} />
           <Route path="/posts" exact component={Home} />
           <Route path="/posts/search" exact component={Home} />
           <Route path="/posts/:id" component={PostDetails} />
           <Route
-            path="/Auth"
+            path="/auth"
             exact
             component={() => (!user ? <Auth /> : <Redirect to="/posts" />)}
           />
