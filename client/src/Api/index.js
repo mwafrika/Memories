@@ -1,5 +1,5 @@
 import axios from "axios";
-// https://souvenir-01.herokuapp.com/ http://localhost:5000
+// https://souvenir-01.herokuapp.com/
 
 const API = axios.create({ baseURL: "http://localhost:5000" });
 API.interceptors.request.use((req) => {
