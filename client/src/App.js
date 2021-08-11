@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/posts/search" exact component={Home} />
           <Route path="/posts/:id" component={PostDetails} />
           <Route
-            path="/auth"
+            path="/Auth"
             exact
             component={() => (!user ? <Auth /> : <Redirect to="/posts" />)}
           />

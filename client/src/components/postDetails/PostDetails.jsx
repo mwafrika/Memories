@@ -10,6 +10,7 @@ import moment from "moment";
 import { useParams, useHistory } from "react-router-dom";
 import useStyles from "./styles";
 import { getPost, getPostBySearch } from "../../actions/posts";
+import Comment from "./CommentSection";
 const PostDetails = () => {
   const { post, posts, isLoading } = useSelector((state) => state.posts);
 
@@ -22,18 +23,16 @@ const PostDetails = () => {
     dispatch(getPost(id));
   }, [id]);
   useEffect(() => {
-    console.log(post, "POST DETAILS");
+    console.log(posts, "POST DETAILS");
     if (post) {
-      dispatch(
-        getPostBySearch({ search: "none", tags: post?.post?.tags.join(",") })
-      );
+      dispatch(getPostBySearch({ search: "none", tags: post?.tags.join(",") }));
     }
   }, [post]);
 
-  const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
+  if (!post) return null;
+
   const openPost = (_id) => history.push(`/posts/${_id}`);
 
-  if (!post) return null;
   if (isLoading) {
     return (
       <Paper elevation={6} className={classes.loadingPaper}>
@@ -41,6 +40,9 @@ const PostDetails = () => {
       </Paper>
     );
   }
+  const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
+  console.log(recommendedPosts, "RECOMMENDED POSTS1");
+
   return (
     <Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>
       <div className={classes.card}>
@@ -69,7 +71,7 @@ const PostDetails = () => {
           </Typography>
           <Divider style={{ margin: "20px 0" }} />
           <Typography variant="body1">
-            <strong>Comments - coming soon!</strong>
+            <Comment post={post} />
           </Typography>
           <Divider style={{ margin: "20px 0" }} />
         </div>
@@ -84,7 +86,7 @@ const PostDetails = () => {
           />
         </div>
       </div>
-      {!!recommendedPosts.length && (
+      {recommendedPosts.length && (
         <div className={classes.section}>
           <Typography gutterBottom variant="h5">
             You must also like this

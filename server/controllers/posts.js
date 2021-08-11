@@ -112,4 +112,18 @@ export const LikePost = async (req, res) => {
   res.json(data);
 };
 
+export const commentPost = async (req, res) => {
+  const { id } = req.params;
+  const { comment } = req.body;
+  // if (!mongoose.Types.ObjectId.isValid(_id))
+  //   return res.status(404).json("No post found");
+  const post = await PostMessage.findById(id);
+
+  // comment.creator = req.userId;
+  // comment.createdAt = new Date().toISOString();
+  post.comments.push(comment);
+  const data = await PostMessage.findByIdAndUpdate(id, post, { new: true });
+  console.log(post, "commentPost");
+  res.json(data);
+};
 export default router;

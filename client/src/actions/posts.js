@@ -9,6 +9,7 @@ import {
   START_LOADING,
   END_LOADING,
   FETCH_POST,
+  COMMENT,
 } from "../constants/actionTypes";
 
 export const getPost = (id) => async (dispatch) => {
@@ -48,6 +49,18 @@ export const getPosts = (page) => async (dispatch) => {
     dispatch({
       type: END_LOADING,
     });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const commentPost = (comment, postId) => async (dispatch) => {
+  try {
+    const { data } = await Api.commentPosts(comment, postId);
+
+    console.log(data, "COMMENT POST");
+    dispatch({ type: COMMENT, payload: data });
+    return data.comments;
   } catch (error) {
     console.log(error);
   }

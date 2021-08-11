@@ -7,6 +7,7 @@ import {
   LikePost,
   getPostBySearch,
   getPost,
+  commentPost,
 } from "../controllers/posts";
 import auth from "../middleware/auth";
 
@@ -17,6 +18,6 @@ const router = Router()
   .post("/", auth, createPost)
   .patch("/:id", auth, updatePost)
   .delete("/:id", auth, deletePost)
-  .patch("/:id/like", auth, LikePost);
-
+  .patch("/:id/like", auth, LikePost)
+  .post("/:id/comment", auth, commentPost);
 export default router;

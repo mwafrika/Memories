@@ -8,6 +8,7 @@ import {
   END_LOADING,
   FETCH_POST,
   START_LOADING,
+  COMMENT,
 } from "../constants/actionTypes";
 
 const reducer = (state = { isLoading: true, posts: [] }, action) => {
@@ -25,7 +26,7 @@ const reducer = (state = { isLoading: true, posts: [] }, action) => {
       };
 
     case FETCH_ALL:
-      console.log("FETCH_ALL");
+      console.log(action.payload.data, "PAYLOAD");
       return {
         ...state,
         posts: action.payload.data,
@@ -53,7 +54,13 @@ const reducer = (state = { isLoading: true, posts: [] }, action) => {
 
     case FETCH_POST:
       return { ...state, post: action.payload.post };
-
+    case COMMENT:
+      return {
+        ...state,
+        posts: state.posts.map((post) =>
+          post._id === action.payload._id ? action.payload : post
+        ),
+      };
     case CREATE:
       return { ...state, posts: [...state.posts, action.payload] };
 
