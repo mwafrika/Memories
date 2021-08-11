@@ -25,7 +25,7 @@ const Post = ({ post, setCurrentId }) => {
   const [likes, setLikes] = useState(post?.likes);
 
   const user = JSON.parse(localStorage.getItem("profile"));
-  const userId = user.result?.googleId || user.result?._id;
+  const userId = user?.result?.googleId || user?.result?._id;
   const hasLikedPost = likes.find((like) => like === userId);
 
   const openPost = () => history.push(`/posts/${post._id}`);
@@ -96,6 +96,7 @@ const Post = ({ post, setCurrentId }) => {
                 e.stopPropagation();
                 setCurrentId(post._id);
               }}
+              gutterBottom
             >
               <MoreHorizIcon fontSize="medium" />
             </Button>
