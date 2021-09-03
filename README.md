@@ -2,3 +2,5 @@
 
 # Souvenirs
 Souvenir is an application where people can easily share their memories of interest.
+
+Check the [Live Link](https://souvenirs-01.netlify.app/posts)
