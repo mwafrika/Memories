@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 app.use("/posts", routes);
 app.use("/user", UserRoutes);
 const PORT = process.env.PORT || 5000;
+console.log(process.env.CONNECTION_URL, "mwafrika");
 mongoose
   .connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,

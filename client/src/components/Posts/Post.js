@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Post from "./post/post";
 import useStyle from "./post/styles";
 import { useSelector } from "react-redux";
@@ -6,7 +6,13 @@ import { CircularProgress, Grid } from "@material-ui/core";
 const Posts = ({ setCurrentId }) => {
   const classes = useStyle();
   const { posts, isLoading } = useSelector((state) => state.posts);
-  console.log(posts, "mwwafrika");
+
+  useEffect(() => {
+    if (posts.length === 0) {
+      setCurrentId(null);
+    }
+  }, [posts, setCurrentId]);
+
   if (!posts.length && !isLoading) return "No posts";
 
   return isLoading ? (
