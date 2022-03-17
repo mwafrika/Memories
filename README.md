@@ -58,7 +58,9 @@ cd Memories/client && npm start
 cd Memories/server && npm start
 ```
 
-### Note : In the upcoming version of this project, There will be considerable improvements including the usage of `concurently ` to run both the client and the server in parallel and only once to make life easier when running the project locally and remotely
+### Note :
+
+There will be significant improvements in the upcoming version of this project, including the use of `concurrently` to run both the client and the server in parallel and only once to make life easier when running the project locally and remotely.
 
 ## Authors
 
