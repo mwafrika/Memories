@@ -89,7 +89,7 @@ const PostDetails = () => {
       {recommendedPosts.length && (
         <div className={classes.section}>
           <Typography gutterBottom variant="h5">
-            You must also like this
+            You might also like this
           </Typography>
           <Divider />
           <div className={classes.recommendedPosts}>
