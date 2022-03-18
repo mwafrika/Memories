@@ -11,10 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.14.8",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.7",
     "@babel/node": "^7.14.7",
     "@babel/preset-env": "^7.14.8",
+    "babel-node": "^0.0.1-security",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.26.2",
     "cors": "^2.8.5",
