@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/153c7db9-ec78-42ee-b1f4-61ef8dc2665c/deploy-status)](https://app.netlify.com/sites/souvenirs-01/deploys) ![Heroku](https://pyheroku-badge.herokuapp.com/?app=souvenir-01)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/153c7db9-ec78-42ee-b1f4-61ef8dc2665c/deploy-status)](https://app.netlify.com/sites/souvenirs-01/deploys) ![Heroku](https://pyheroku-badge.herokuapp.com/?app=souvenir-02)
 
 # Souvenirs
 
